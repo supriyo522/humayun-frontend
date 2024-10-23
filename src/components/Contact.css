@@ -1,31 +1,44 @@
 .contact-container {
     padding: 20px;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
-    text-align: left;
   }
   
   .contact-info {
+    display: flex;
+    justify-content: space-between; /* Space between the two columns */
+    gap: 20px; /* Space between columns */
+  }
+  
+  .contact-column {
+    flex: 1; /* This ensures that both columns take equal width */
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .contact-info h2 {
-    margin-top: 20px;
+  .contact-column h2 {
+    margin-top: 0;
     color: #333;
   }
   
-  .contact-info p {
+  .contact-column p {
     margin: 5px 0;
   }
   
-  .contact-info a {
+  .contact-column a {
     color: #007bff;
     text-decoration: none;
   }
   
-  .contact-info a:hover {
+  .contact-column a:hover {
     text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-info {
+      flex-direction: column; /* Stack the columns on smaller screens */
+    }
   }
   
